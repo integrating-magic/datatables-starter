@@ -2,12 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>JSDev</title>
+    <title>Datatables Starter</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/colreorder/1.5.2/css/colReorder.bootstrap4.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/colreorder/1.5.2/js/dataTables.colReorder.min.js"></script>
+    <style>
+      #example_info {
+        display: none;
+      }
+      div.dataTables_scrollBody {
+        border-bottom: solid 1px lightgray;
+      }
+      tr.highlight {
+        background-color: whitesmoke !important;
+      }
+    </style>
+    <script src="https://unpkg.com/fm-webviewer-fetch" crossorigin></script>
   </head>
   <body>
-    <h1>Alright. You're set.</h1>
-    <h2>Now build something amazing.</h2>
-    <button type="button">Click Me!</button>
+    <table id="dtable" class="table table-striped" width="100%"></table>
 
     <script src="index.js"></script>
   </body>
