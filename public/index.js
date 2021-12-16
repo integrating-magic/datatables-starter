@@ -11,24 +11,21 @@ window.loadData = function (json) {
   // return;
   // create column headers from data
   var firstRecord = data[0];
-  var columns = Object.keys(firstRecord.fieldData).map(function (key) {
-    console.log("key", key);
-    var field = firstRecord[key];
-    var visible = true;
-    if (key === "Id") visible = false;
-    return {
-      title: key,
-      data: "fieldData." + key,
-      visible: visible,
-    };
-  });
+  var columns = [
+    { data: "fieldData.Id", title: "ID", visible: false },
+    { data: "fieldData.City", title: "City" },
+    { data: "fieldData.CompanyName", title: "Company" },
+    { data: "fieldData.State", title: "State" },
+    { data: "fieldData.StreetAddress", title: "Address" },
+  ];
 
+  console.log(columns);
   // Create the DataTable, after destroying it if already exists
   if (table) table.destroy();
   table = $("#dtable").DataTable({
-    paging: false,
-    searching: false,
-    scrollY: "536",
+    paging: true,
+    pageLength: 20,
+    searching: true,
     colReorder: true,
     columns: columns,
     data: data,
