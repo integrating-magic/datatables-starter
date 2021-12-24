@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <title>Datatables Starter</title>
+    <style>
+      @import "src/style.css";
+    </style>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"
@@ -32,11 +35,12 @@
         background-color: whitesmoke !important;
       }
     </style>
-    <script src="https://unpkg.com/fm-webviewer-fetch" crossorigin></script>
   </head>
   <body>
     <table id="dtable" class="table table-sm" width="100%"></table>
 
-    <script src="index.js"></script>
+    <script type="module">
+      import "./src/index.js";
+    </script>
   </body>
 </html>

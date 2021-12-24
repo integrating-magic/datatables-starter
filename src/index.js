@@ -1,6 +1,4 @@
 //Here we're importing items we'll need. You can add other imports here.
-import "./style.css";
-import "regenerator-runtime/runtime.js";
 
 var table;
 
