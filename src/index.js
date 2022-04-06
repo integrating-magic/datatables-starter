@@ -4,14 +4,11 @@ var table;
 
 // exposing loadData to FileMaker Script
 window.loadData = function (json) {
-
-// TODO: Load the DataTables libraries by linking to the DataTables CDN.
+  // TODO: Load the DataTables libraries by linking to the DataTables CDN.
   //TODO: Get data from FileMaker
-//TODO: prep it for the JS.
-  
-  
-  //TODO: create the columns.
+  //TODO: prep it for the JS.
 
+  //TODO: create the columns.
 
   //TODO: Explore options of Datatables
   //https://datatables.net/reference/option/
@@ -25,4 +22,4 @@ window.loadData = function (json) {
     columns: [],
     data: [],
   });
-
+};
