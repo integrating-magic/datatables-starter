@@ -14,7 +14,10 @@
   "author": "jeremy@integratingmagic.io",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.1.3",
+    "datatables.net-bs4": "^1.11.5",
     "fm-webviewer-fetch": "^1.1.0",
+    "jquery": "^3.6.0",
     "parcel": "^2.0.1"
   },
   "devDependencies": {
