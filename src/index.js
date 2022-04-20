@@ -1,6 +1,5 @@
 //Here we're importing items we'll need. You can add other imports here.
-const $ = require("jquery");
-require("datatables.net-bs4")(window, $);
+
 var table;
 
 // exposing loadData to FileMaker Script
