@@ -5,9 +5,10 @@ var table;
 // exposing loadData to FileMaker Script
 window.loadData = function (json) {
   const obj = JSON.parse(json);
-  console.log(obj);
+  // console.log(obj);
   const data = obj.data;
-  console.log(data);
+  // console.log(data);
+  // const transformedData = map
   //TODO: Load the DataTables libraries by linking to the DataTables CDN.
   //TODO: Get data from FileMaker
   //TODO: prep it for the JS.
@@ -25,12 +26,29 @@ window.loadData = function (json) {
   console.log(data[0].fieldData);
   console.log(data[0].fieldData.City);
 
+  const numbers = [1,2,3,4,5,6];
+  
+  function myFunction(item, index, arr) {
+    arr[index] = item * 10;
+  };
+  
+  console.log(numbers.forEach(myFunction));
+
+  // I would take what you’ve gotten started and create a new array for columns: 
+  // myKeys.map(function(e) {  }) 
+
+  // in that function you’d return an object for each column in your 
+  // keys array that has {title: e, data: “fieldData.” + e}.  where e is one key at a time.
+  
   table = $("#dtable").DataTable({
     paging: true,
     pageLength: 20,
     searching: true,
     colReorder: true,
+    data: data,
     columns: [
+
+      { title: myKeys[0],},
       { title: myKeys[1] },
       { title: myKeys[2] },
       { title: myKeys[3] },
@@ -46,8 +64,16 @@ window.loadData = function (json) {
       // { title: "Zip" },
       // { title: "Last Name", data: "lastName" },
       // { title: "Years Young", data: "age", width: "10%" },
+
     ],
-    data: [data[0].fieldData],
+    // data:  columnData()
+
+    // { title: myKeys[2], data: "data[0].fieldData.City" },
+    // { title: myKeys[3], data: "data[0].fieldData.City" },
+    // { title: myKeys[4], data: "data[0].fieldData.City" },
+    // { title: myKeys[5], data: "data[0].fieldData.City" },
+    // { title: myKeys[6], data: "data[0].fieldData.City" },
+    // ,
     // data: [
     //   {firstName: "John", lastName: "Brown", age: 62},
     //   {firstName: "Jane", lastName: "Doe", age: 58}
