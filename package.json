@@ -14,7 +14,6 @@
   "author": "jeremy@integratingmagic.io",
   "license": "ISC",
   "dependencies": {
-    "fm-webviewer-fetch": "^1.1.0",
     "parcel": "^2.0.1"
   },
   "devDependencies": {
