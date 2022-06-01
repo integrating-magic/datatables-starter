@@ -13,10 +13,8 @@
   },
   "author": "jeremy@integratingmagic.io",
   "license": "ISC",
-  "dependencies": {
-    "parcel": "^2.0.1"
-  },
   "devDependencies": {
-    "open": "^8.2.1"
+    "open": "^8.2.1",
+    "parcel": "^2.6.0"
   }
 }
