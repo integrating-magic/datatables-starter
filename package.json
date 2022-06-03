@@ -1,5 +1,5 @@
 {
-  "name": "DataTables Starter",
+  "name": "datatables-starter",
   "version": "2.0.0",
   "description": "Get Started with DataTables for Your App",
   "scripts": {
@@ -14,7 +14,13 @@
   "author": "jeremy@integratingmagic.io",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^8.16.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.1",
+    "eslint-plugin-promise": "^6.0.0",
     "open": "^8.2.1",
-    "parcel": "^2.6.0"
+    "parcel": "^2.6.0",
+    "prettier": "2.6.2"
   }
 }

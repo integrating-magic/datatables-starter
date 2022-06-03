@@ -1,0 +1,7 @@
+#ignore artifacts:
+node_modules
+.vscode
+.cache
+dist
+import.log
+.parcel-cache
