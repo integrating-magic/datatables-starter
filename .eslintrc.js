@@ -9,11 +9,11 @@ module.exports = {
     sourceType: "module",
   },
   rules: {
-    "comma-dangle": ["warn", "never"],
-    semi: ["warn", "never"],
+    "comma-dangle": "off",
     "no-var": "warn",
-    quotes: ["warn", "double"],
-    "no-unused-expressions": "warn",
+    semi: "off",
     "no-undef": "off",
+    "no-unused-expressions": "warn",
+    quotes: ["warn", "double"],
   },
 };

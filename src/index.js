@@ -1,11 +1,10 @@
-var table;
-const four = 4;
+let table;
 // https://datatables.net/reference/option/
 // https://datatables.net/examples/index
 
 window.loadTable = (json) => {
   const obj = JSON.parse(json);
-  // const data = obj.columns;
+  // const data = obj.data;
   const columns = [
     {
       title: "First Name",
