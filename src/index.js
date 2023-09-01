@@ -4,24 +4,32 @@ let table;
 
 window.loadTable = (json) => {
   const obj = JSON.parse(json);
-  // const data = obj.data;
+  // const data = obj.data
+  const data = [
+    { Name: "Limited", Cost: 100 },
+    { Name: "SE", Cost: 200 },
+  ];
   const columns = [
     {
       title: "First Name",
-      data: "first",
+      data: "Name",
     },
     {
-      title: "Last",
-      data: "last",
-    },
-    {
-      title: "Age",
-      data: "age",
+      title: "Cost",
+      data: "Cost",
     },
   ];
-  const data = [];
+  const myOptions = { paging: false, searching: false };
+
   table = $("#dtable").DataTable({
     columns,
     data,
+    ...myOptions,
   });
 };
+$("#dtable").on("click", "tbody tr", function () {
+  const row = table.row(this);
+  const data = row.data();
+  console.log(data);
+  FileMaker.PerformScript("Receive Row from JS", JSON.stringify(data));
+});
